@@ -67,10 +67,10 @@ def show_messages(section: int = None):
             session.query(Message)
             .filter(Message.section_number == section)
             .order_by(Message.id.desc())
-            .limit(50)
+            .limit(25)
         )
     else:
-        results = session.query(Message).order_by(Message.id.desc()).limit()
+        results = session.query(Message).order_by(Message.id.desc()).limit(25)
     messages = [result.text for result in results]
     if len(messages) > 0:
         html = (
