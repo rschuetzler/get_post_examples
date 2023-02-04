@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "is404-api"
+name = "post_get_examples"
 version = "0.1.0"
 description = ""
-authors = ["Ryan Schuetzler <ryan@schuetzler.net>"]
+authors = ["Ryan Schuetzler <ryan.schuetzler@byu.edu>"]
 readme = "README.md"
-packages = [{include = "is404_api"}]
+packages = [{include = "post_get_examples"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
