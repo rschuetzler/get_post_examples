@@ -86,14 +86,15 @@ async def generate_madlib(
 
 @app.get("/")
 def index():
-    return """
+    html = """
     <html>
       <head>
         <title>Skill Check 2</title>
       </head>
       <body>I don't think this is what you want. Maybe try going to the <a href="/docs">API docs</a>.</body>
     </html>
-    """
+    """  # noqa
+    return HTMLResponse(status_code=200, content=html)
 
 
 @app.get("/apikey", status_code=201, tags=["skillcheck"])
